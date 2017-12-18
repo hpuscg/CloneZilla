@@ -1,0 +1,46 @@
+1. Boot the machine via Clonezilla live
+  --- Remember to use the Clonezilla live CD or USB flash drive to boot the machine.
+  --- You can set the first boot priority in the BIOS as USB-HDD or USB-ZIP 
+      so that it can boot Clonezilla Live from your USB flash drive.
+  --- You can either set CD as first boot priority in machine's BIOS.
+  --- Or by pressing a hotkey (e.g. Esc, F9 or maybe F12) when you boot the machine, you will see the boot menu of BIOS.
+
+2. The boot menu of Clonezilla live
+  --- The first one is the default mode for Clonezilla Live. 
+  --- It will default to framebuffer mode with a resolution of 800x600.
+  --- Press 「Tab」 to edit options.
+
+3. Here we choose 800x600 mode, after pressing Enter, you will see Debian Linux booting process
+
+4. Choose language
+  --- zh_CN.UTF-8 Chinese(Simplified)|简体中文
+
+5. Choose keyboard layout
+  --- There is a bug when choosing French keymap in "Select keymap from arch list",
+    so use "Select keymap from full list" to change keymap if you are using French keyboard.
+
+6. Choose "Start Clonezilla"
+
+7. Choose "device-image" option
+
+8. Choose "local_dev" option to assign sdb1 as the image home
+  --- Once you see the device you have inserted shown on the status, you have to press Ctrl-C to quit the scanning report.
+
+9. Select sdb1 as image repository, then choose "savedisk" option
+
+10. Input image name and select source disk
+  --- Enter the image name, Clonezilla will give an image name based on date and time, feel free to change it.
+  --- Select the source disk "sda" we want to save.
+  --- Select if the source file system need to be checked or not.
+  --- Select if you want to check the saved image.
+  --- Select if you want to encrypt the image.
+    === //NOTE// You have to remember the passphrase otherwise the image will _NOT_ be useable in the future. 
+        There is no back door to decrypt the image.
+  --- Select the mode you want after the image saving is done.
+  
+
+11. Clonezilla is saving disk image (sda) to the partition of 2nd disk (sdb1)
+
+
+That's all. We have successfully saved disk image (sda) on 2nd disk (sdb1). 
+The image on the 2nd disk is a directory with name "xenial-x64-20170924".
