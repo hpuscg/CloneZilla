@@ -1,39 +1,66 @@
 1. Boot the machine via Clonezilla live
-1.1  In this example, we need 2 disk.
 
-1.2  We already have a Clonezilla image in one disk, the image name is called "xenial-x64-20170924".
+  1.1  In this example, we need 2 disk.
 
-1.3  Remember to use the Clonezilla live CD or USB flash drive to boot the machine.
+  1.2  We already have a Clonezilla image in one disk, the image name is called "xenial-x64-20170924".
+
+  1.3  Remember to use the Clonezilla live CD or USB flash drive to boot the machine.
+  
+  
 2. The boot menu of Clonezilla live
-2.1 The first one is the default mode for Clonezilla Live.We choose it.
 
-2.2 There are more modes which you can choose in the 2nd choice "Other modes of Clonezilla live".
+  2.1 The first one is the default mode for Clonezilla Live.We choose it.
+
+  2.2 There are more modes which you can choose in the 2nd choice "Other modes of Clonezilla live".
+  
+  
 3. Here we choose 800x600 mode, after pressing Enter, you will see Debian Linux booting process
+
+
 4. Choose language---简体中文.
+
+
 5. Choose keyboard layout---Don't touch keymap.
-5.1 If you want to change keymap, you can either choose "Select keymap from arch list" or "Select keymap from full list".
+
+  5.1 If you want to change keymap, you can either choose "Select keymap from arch list" or "Select keymap from full list".
+  
+  
 6. Choose "Start Clonezilla"---Start_CloneZilla Start CloneZilla.
+
+
 7. Choose "device-image" option---Choose the first.
-7.1 From now on, if multiple choices are available, you have to press space key to mark your selection. A star sign (*) will be shown when the selection is done
+
+  7.1 From now on, if multiple choices are available, you have to press space key to mark your selection. A star sign (*) will be shown when the selection is done
+
+
 8. Choose "local_dev" option to assign sdb1 as the image home.
-8.1 There are other options, e.g. sshfs, samba, nfs or webdav, AWS S3 or Openstack Swift 。
 
-8.2 Once you see the device you have inserted shown on the status, you have to press Ctrl-C to quit the scanning report.
+  8.1 There are other options, e.g. sshfs, samba, nfs or webdav, AWS S3 or Openstack Swift 。
+
+  8.2 Once you see the device you have inserted shown on the status, you have to press Ctrl-C to quit the scanning report.
+
+
 9. Select sdb1 as image repository, then choose "restoredisk" option
-9.1 Choose the directory as the image repository. Here we put image on the top directory.
 
-9.2 The partition name is the device name in GNU/Linux. 
-The first partition in the first disk is "sda1", the 2nd partition in the first disk is "sda2", the first partition in the second disk is "sdb1" or "sdb1"... 
-If the system you want to save is MS windows, normally C: is sda1, and D: could be sda2, or sda5...
+  9.1 Choose the directory as the image repository. Here we put image on the top directory.
 
-9.3 Here we choose "Beginner" mode.
+  9.2 The partition name is the device name in GNU/Linux. 
+    The first partition in the first disk is "sda1", the 2nd partition in the first disk is "sda2", the first partition in the second disk is "sdb1" or "sdb1"... 
+    If the system you want to save is MS windows, normally C: is sda1, and D: could be sda2, or sda5...
+
+  9.3 Here we choose "Beginner" mode.
+
+
 10. Select image name and destination disk
-10.1 Choose the Clonezilla live image as source image.
 
-10.2 Select the destination disk "sda" we want to restore.
+  10.1 Choose the Clonezilla live image as source image.
 
-10.3 Choose to check the image integrity before really restoring the image to disk sda.
+  10.2 Select the destination disk "sda" we want to restore.
 
-10.4 Select the mode you want after the image saving is done.
+  10.3 Choose to check the image integrity before really restoring the image to disk sda.
+
+  10.4 Select the mode you want after the image saving is done.
+
+
 11. Clonezilla is restoring disk image on 2nd disk (sdb) to 1st disk (sda)
 
